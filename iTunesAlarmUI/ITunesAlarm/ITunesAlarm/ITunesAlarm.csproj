@@ -46,18 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Playlist.cs" />
-    <Compile Include="ITunesService.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="AlarmList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="AlarmList.Designer.cs">
+      <DependentUpon>AlarmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Playlist.cs" />
+    <Compile Include="ITunesService.cs" />
+    <Compile Include="AlarmEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlarmEditForm.Designer.cs">
+      <DependentUpon>AlarmEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="AlarmEditForm.resx">
+      <DependentUpon>AlarmEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlarmList.resx">
+      <DependentUpon>AlarmList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

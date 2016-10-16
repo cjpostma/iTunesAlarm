@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ITunesAlarm
 {
-    public partial class MainForm : Form
+    public partial class AlarmList : Form
     {
-        public MainForm()
+        public AlarmList()
         {
             InitializeComponent();
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

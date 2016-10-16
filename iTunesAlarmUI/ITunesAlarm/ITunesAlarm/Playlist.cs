@@ -8,15 +8,28 @@ using System.Threading.Tasks;
 
 namespace ITunesAlarm.Entity    
 {
-    class Playlist
+    class SimplePlaylist
     {
-        private readonly int externalId;
-        private readonly string name;
-        private readonly IList<Song> songs = new List<Song>(); 
-        public Playlist(IITPlaylist iTunesPlaylist)
+        public int externalId { get; }
+        public string name { get; }
+        public SimplePlaylist(IITPlaylist iTunesPlaylist)
         {
             this.externalId = iTunesPlaylist.playlistID;
             this.name = iTunesPlaylist.Name;
+
+        }
+
+        public override string ToString()
+        {
+            return this.name;
+        }
+    }
+
+    class Playlist : SimplePlaylist
+    {
+        private readonly IList<Song> songs = new List<Song>(); 
+        public Playlist(IITPlaylist iTunesPlaylist): base(iTunesPlaylist)
+        {
             foreach(IITTrack track in iTunesPlaylist.Tracks)
             {
                 songs.Add(new Song(track));
